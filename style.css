@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #071829;
+  --white-color: #ffffff;
+  --gap: 3rem;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 5.5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 5rem;
+}
+
+h4 {
+  font-size: 4.5rem;
+}
+
+h5 {
+  font-size: 4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 3rem;
+}
+
+.primary-bg {
+  background-image: url('./assets/main-bg.svg');
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color);
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.white-bg {
+  background: var(--green-light);
+  color: var(--primary-color);
+}
+
+.main-content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10rem var(--gap);
+}
+
+.home-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--gap);
+  min-height: 100vh;
+}
+
+.home-text,
+.home-img {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.aboutme {
+  max-width: 64rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
