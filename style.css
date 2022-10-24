@@ -10,7 +10,7 @@ html {
 }
 
 :root {
-  --primary-color: #071829;
+  --primary-color: #14304b;
   --white-color: #ffffff;
   --gap: 3rem;
 }
@@ -42,15 +42,7 @@ h2 {
   line-height: 1.2;
 }
 h3 {
-  font-size: 5rem;
-}
-
-h4 {
-  font-size: 4.5rem;
-}
-
-h5 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 a {
@@ -73,14 +65,14 @@ p {
 }
 
 .white-bg {
-  background: var(--green-light);
+  background: var(--white-color);
   color: var(--primary-color);
 }
 
 .main-content {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 10rem var(--gap);
+  padding: 7rem var(--gap);
 }
 
 .home-content {
@@ -105,4 +97,189 @@ p {
   justify-content: center;
   min-height: 100vh;
   text-align: center;
+}
+
+.hobbies {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hobbies-h2 {
+  margin-bottom: 1rem;
+}
+
+.hobbies-description {
+  padding-bottom: 5rem;
+}
+
+.descriptionsforhobbies {
+  display: flex;
+  gap: var(--gap);
+}
+
+.gallery-wrap {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 36rem;
+  max-height: 36rem;
+  overflow: hidden;
+}
+
+.gallery-img img:hover {
+  transform: translate(-1%, 1%) scale(1.1);
+}
+
+.contact {
+  grid-column: span 2;
+}
+
+.contact,
+.form {
+  border: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gap);
+}
+
+.form legend {
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.form-fields {
+  flex: 1 1 32rem;
+}
+
+.form-fields label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-fields input {
+  border: none;
+  background: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 20px;
+}
+
+.form-fields textarea {
+  border: none;
+  background: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 20px;
+}
+
+.form-fields button {
+  border: 0.2rem solid var(--white-color);
+  background: none;
+  color: var(--white-color);
+  padding: 1rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.form-fields button:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+.form-fields ::placeholder {
+  color: gray;
+}
+
+body .widthmax {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+.back-to-top {
+  display: none;
+}
+
+.show {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  background: var(--white-color);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--primary-color);
+  transform: rotate(-90deg);
+  border: 0.1rem solid var(--primary-color);
+}
+
+/*menu*/
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 0.1rem solid lightgray;
+}
+
+.menu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu h1 {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+}
+
+.menu h1 a {
+  color: inherit;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  color: var(--primary-color);
+}
+
+.menu ul li a {
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: inherit;
+  position: relative;
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--primary-color);
+  transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  width: 50%;
+  left: 25%;
 }
